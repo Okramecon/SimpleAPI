@@ -1,23 +1,24 @@
 ﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using SimpleAPI.DAL.Contracts;
+using SimpleAPI.DAL.Entities;
 
 namespace SimpleAPI.DAL.Repositories
 {
-    public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : class
+    public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : BaseEntity
     {
-        private readonly DbContext _context;
+        private readonly AppDbContext _context;
         private readonly DbSet<TEntity> _dbSet;
 
-        public EntityRepository(DbContext context)
+        public EntityRepository(AppDbContext context)
         {
             _context = context;
             _dbSet = _context.Set<TEntity>();
         }
 
-        public async Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int id, bool trackable)
         {
-            return await _dbSet.FindAsync(id);
+            return trackable ? await _dbSet.FindAsync(id) : await _dbSet.AsNoTracking().FirstOrDefaultAsync(x  => x.Id == id);
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()

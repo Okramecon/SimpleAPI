@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI.CMD", "SimpleAPI\SimpleAPI.CMD.csproj", "{297177FE-97F6-4144-887F-429502C05E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.CMD", "SimpleAPI\SimpleAPI.CMD.csproj", "{297177FE-97F6-4144-887F-429502C05E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI.BLL", "SimpleAPI.BLL\SimpleAPI.BLL.csproj", "{FC208C82-0D62-48E6-B091-2B06B86C155A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.BLL", "SimpleAPI.BLL\SimpleAPI.BLL.csproj", "{FC208C82-0D62-48E6-B091-2B06B86C155A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI.DAL", "SimpleAPI.DAL\SimpleAPI.DAL.csproj", "{9F35A2A9-1288-41F5-AC93-1C50A6D41463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.DAL", "SimpleAPI.DAL\SimpleAPI.DAL.csproj", "{9F35A2A9-1288-41F5-AC93-1C50A6D41463}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI.DTO", "SimpleAPI.DTO\SimpleAPI.DTO.csproj", "{F9F64992-0CAB-405F-9CC1-9EC05A9C22DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.DTO", "SimpleAPI.DTO\SimpleAPI.DTO.csproj", "{F9F64992-0CAB-405F-9CC1-9EC05A9C22DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.Api", "SimpleAPI.API\SimpleAPI.Api.csproj", "{316B9082-C2A6-42D1-8DAD-7472E944FA12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F9F64992-0CAB-405F-9CC1-9EC05A9C22DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9F64992-0CAB-405F-9CC1-9EC05A9C22DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9F64992-0CAB-405F-9CC1-9EC05A9C22DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316B9082-C2A6-42D1-8DAD-7472E944FA12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316B9082-C2A6-42D1-8DAD-7472E944FA12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316B9082-C2A6-42D1-8DAD-7472E944FA12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316B9082-C2A6-42D1-8DAD-7472E944FA12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,9 @@ using SimpleAPI.DAL;
 
 Console.WriteLine("Hello, World!");
 
-using (var context = new AppDbContext())
-{
-    var orders = context.Orders;
-}
+
+
+//using (var context = new AppDbContext())
+//{
+//    var orders = context.Orders;
+//}

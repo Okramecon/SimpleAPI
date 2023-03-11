@@ -4,9 +4,8 @@ using Microsoft.EntityFrameworkCore;
 namespace SimpleAPI.DAL.Entities
 {
     [PrimaryKey(nameof(Id))]
-    public class Order
+    public class Order : BaseEntity
     {
-        public int Id { get; set; }
 
         [MaxLength(20)]
         public string ProductSku { get; set; }
