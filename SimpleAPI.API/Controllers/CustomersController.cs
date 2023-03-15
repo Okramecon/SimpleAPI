@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SimpleAPI.BLL.Contracts;
 using SimpleAPI.BLL.Services;
 using SimpleAPI.DAL.Contracts;
@@ -20,6 +21,7 @@ namespace SimpleAPI.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<int> Create(CustomerAddDto customer)
         {
             if (customer == null || string.IsNullOrEmpty(customer.Email))
@@ -33,6 +35,7 @@ namespace SimpleAPI.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<CustomerGetDto> GetById(int id)
         {
             var customer = await _customerService.GetByIdAsync(5);
