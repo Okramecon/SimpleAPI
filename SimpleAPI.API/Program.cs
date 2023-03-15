@@ -26,7 +26,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAuthorization();
+
 builder.Services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>(options =>
 {
     options.Password.RequireNonAlphanumeric = true;
@@ -34,7 +34,7 @@ builder.Services.AddIdentity<IdentityUser<Guid>, IdentityRole<Guid>>(options =>
 })
     .AddEntityFrameworkStores<AppDbContext>();
 
-
+builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(options => options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options => {
             options.Events.OnRedirectToAccessDenied = context =>

@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SimpleAPI.Api.Attributes;
 using SimpleAPI.BLL.Contracts;
 using SimpleAPI.BLL.Services;
 using SimpleAPI.DAL.Contracts;
 using SimpleAPI.DAL.Entities;
 using SimpleAPI.DTO.CustomerDTOs;
+using static SimpleAPI.Api.Attributes.AuthAttribute;
 
 namespace SimpleAPI.Api.Controllers
 {
@@ -21,7 +23,7 @@ namespace SimpleAPI.Api.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Auth(RoleTypes.None, RoleTypes.User)]
         public async Task<int> Create(CustomerAddDto customer)
         {
             if (customer == null || string.IsNullOrEmpty(customer.Email))
